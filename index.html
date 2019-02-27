@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
+    <!-- <style>
         div#test {
             border: #000 1px solid;
             padding: 10px 40px 40px 40px;
         }
-    </style>
+    </style> -->
+    
 </head>
 
 <body>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="app.js"></script>
+    
     <audio id="audio" preload="none" src="assets\soundfiles\Buzzer.mp3"></audio>
 
     <h1 id=Title>Trivia Game</h1>
@@ -25,91 +26,7 @@
     <h2 id="test_status"></h2>
     <div id="test"></div>
 
-
-    <script>
-
-        var number = 31;
-        var intervalId;
-        var buzzer = new Audio("assets/soundfiles/Buzzer.mp3");
-
-        // video tut
-        var pos = 0, test, test_status, question, choice, choices, chA, chB, chC, correct = 0;
-        var questions = [
-            ["What is 10 + 4?", "12", "14", "16", "B"],
-            ["What is 20 - 9?", "7", "13", "11", "C"],
-            ["What is 7 x 3?", "21", "24", "25", "A"],
-            ["What is 8 / 2?", "10", "2", "4", "C"]
-        ];
-        function _(x) {
-            return document.getElementById(x);
-        }
-        function renderQuestion() {
-            test = _("test");
-            if (pos >= questions.length) {
-                test.innerHTML = "<h2>You got " + correct + " of " + questions.length + " questions correct</h2>";
-                _("test_status").innerHTML = "Test Completed";
-                pos = 0;
-                correct = 0;
-                stop();
-                return false;
-
-            }
-            _("test_status").innerHTML = "Question " + (pos + 1) + " of " + questions.length;
-            question = questions[pos][0];
-            chA = questions[pos][1];
-            chB = questions[pos][2];
-            chC = questions[pos][3];
-            test.innerHTML = "<h3>" + question + "</h3>";
-            test.innerHTML += "<input type='radio' name='choices' value='A'> " + chA + "<br>";
-            test.innerHTML += "<input type='radio' name='choices' value='B'> " + chB + "<br>";
-            test.innerHTML += "<input type='radio' name='choices' value='C'> " + chC + "<br><br>";
-            test.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
-        }
-        function checkAnswer() {
-            choices = document.getElementsByName("choices");
-            for (var i = 0; i < choices.length; i++) {
-                if (choices[i].checked) {
-                    choice = choices[i].value;
-                }
-            }
-            if (choice == questions[pos][4]) {
-                correct++;
-            }
-            pos++;
-            renderQuestion();
-        }
-        window.addEventListener("load", renderQuestion, false);
-
-
-            setTimeout(timeUp, 1000 * 31);
-        
-    
-
-        function run() {
-
-            clearInterval(intervalId);
-            intervalId = setInterval(decrement, 1000);
-           
-        }
-        function decrement() {
-            number--;
-            //double quotes then single quotes or it gets fucked up.. 
-            //took me like and hour to figure out why it wasn't displaying correctly ffs.
-            $("#number-countdown").text('Time Remaining: ' + number);
-            if (number === 0) {
-                stop();
-            }
-        }
-        function stop() {
-            clearInterval(intervalId);
-        }
-        function timeUp() {
-            $("#number-countdown").append("<h2>Time's Up!</h2>");
-
-            buzzer.play();
-        }
-        run();
-    </script>
+    <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>
