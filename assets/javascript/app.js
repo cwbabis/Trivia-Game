@@ -52,7 +52,7 @@ function renderQuestion() {
     test.innerHTML += "<input type='radio' name='choices' value='B'> " + chB + "<br>";
     test.innerHTML += "<input type='radio' name='choices' value='C'> " + chC + "<br>";
     test.innerHTML += "<input type='radio' name='choices' value='D'> " + chD + "<br><br>";
-    test.innerHTML += "<button onclick='checkAnswer()'>Shoot Your Shot</button>";
+    test.innerHTML += "<button type='button' class='btn btn-success' onclick='checkAnswer()'>Shoot Your Shot</button>";
 }
 function checkAnswer() {
     choices = document.getElementsByName("choices");
