@@ -1,0 +1,10 @@
+body {
+    background:url(../images/bballbackground.jpg);
+    background-size: cover;
+    background-color: orange;
+    background-repeat: no-repeat;
+  }
+  h1, h2, p{
+    color: #ffffff;
+    text-align: center;
+}
