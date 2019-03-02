@@ -5,7 +5,7 @@ body {
     background-repeat: no-repeat;
 }
 
-h1, h2, p, h3 {
+h1, p, h2 {
     color: #ffffff;
     text-align: center;
 }
@@ -14,8 +14,8 @@ h1, h2, p, h3 {
     color: #ffffff;
 }
 
-div#test {
+/* div#test {
     background-color: white;
     border: black 1px solid;
     padding: 10px 40px 40px 40px;
-}
+} */
