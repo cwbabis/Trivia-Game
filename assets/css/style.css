@@ -1,5 +1,5 @@
 body {
-    background:url(../images/bballbackground.jpg);
+    background: url(../images/bballbackground.jpg);
     background-size: cover;
     background-color: orange;
     background-repeat: no-repeat;
@@ -14,8 +14,22 @@ h1, p, h2 {
     color: #ffffff;
 }
 
-/* div#test {
-    background-color: white;
-    border: black 1px solid;
-    padding: 10px 40px 40px 40px;
-} */
+.jumbotron{ 
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+ }
+ #questionsJumbotron{
+     margin: 0px;
+     padding: 0px;
+     border: 0px;
+     color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-emphasis-color: black;
+    /* color: white; */
+    background-color: transparent;
+ }
+
